@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev":"node dist/app.js"
+  },
   "devDependencies": {
     "typescript": "^7.0.2"
   }
