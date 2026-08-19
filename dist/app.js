@@ -116,3 +116,31 @@ optiondefault_1.OPTDEF.grettingOpt(); // now i make it optional same function wi
 optiondefault_1.OPTDEF.grettingOpt("Salim");
 optiondefault_1.OPTDEF.greetingDefault(); // with default
 optiondefault_1.OPTDEF.greetingDefault("Uddin"); // with val
+// rest and spread operator (...)
+function printVal(...num) {
+    console.log(num);
+}
+printVal(1, 2, 3, 4, 5);
+function totalSum(...nums) {
+    return nums.reduce((sum, num) => num + sum, 0);
+}
+let totals = totalSum(10, 12, 23, 43);
+console.log(totals);
+// Spread operator (...)
+let ar = [1, 2, 4, 5];
+let nextar = [...ar, 6, 7];
+console.log(nextar);
+let person = {
+    id: 101,
+    name: "Ayn"
+};
+console.log(person);
+const updateUser = {
+    ...person,
+    email: "ayn@gmail.com"
+};
+console.log(updateUser);
+let sum = (x, y) => {
+    return x + y;
+};
+console.log(sum(2, 3));

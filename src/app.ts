@@ -152,6 +152,49 @@ OPTDEF.grettingOpt("Salim")
 OPTDEF.greetingDefault() // with default
 OPTDEF.greetingDefault("Uddin") // with val
 
+// rest and spread operator (...)
+function printVal(...num: number[]){
+    console.log(num);   
+}
+printVal(1,2,3,4,5);
+function totalSum(...nums: number[]): number{
+    return nums.reduce((sum,num) => num+sum,0);
+}
+let totals = totalSum(10,12,23,43)
+console.log(totals);
+
+// Spread operator (...)
+let ar:number [] = [1,2,4,5]
+let nextar :number [] = [...ar,6,7];
+console.log(nextar);
+
+let person = {
+    id: 101,
+    name:"Ayn"
+}
+console.log(person);
+
+const updateUser = {
+    ...person,
+    email:"ayn@gmail.com"
+}
+console.log(updateUser);
+
+// call signature in TS means type
+type Sum = {
+    (
+    a:number,
+    b:number
+    ):number
+}
+let sum:Sum = (x,y) =>{
+    return x+y;
+}
+console.log(sum(2,3));
+
+
+
+
 
 
 
