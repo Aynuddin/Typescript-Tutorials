@@ -1,3 +1,6 @@
+import { EnumClass } from "./enumFile";
+import { OPTDEF } from "./optiondefault";
+
 let value: string = "Ayn Uddin started doing TypeScript and Playwright on live coding session";
 console.log(value);
 // Number types in TypeScript
@@ -117,6 +120,38 @@ console.log(obj1);
 // Destructing this 
 let [usrname,age,isLoggedin] = obj1;
 console.log(age);
+
+EnumClass.run();
+EnumClass.checkPaymentStatus();
+
+type Status = "pending" | "success" | "failed";
+const status:Status = "success"; // can able to again
+//const status1:Status = "cancelled"; // not able to assign because not add in type
+console.log(status);
+
+type User = {
+    id:number
+}
+type Person = {
+    name:string
+}
+
+// type intersection(&)
+type Staff = User & Person;
+const emp:Staff = {
+    id:101,
+    name:"Ayn",
+    //email:"ayn@gmail.com"
+}
+console.log(emp);
+
+// optional and default paramter 
+OPTDEF.gretting("Ayn"); // here optional or default not make so data pass
+OPTDEF.grettingOpt() // now i make it optional same function without param also fine
+OPTDEF.grettingOpt("Salim")
+OPTDEF.greetingDefault() // with default
+OPTDEF.greetingDefault("Uddin") // with val
+
 
 
 

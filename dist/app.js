@@ -1,4 +1,7 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const enumFile_1 = require("./enumFile");
+const optiondefault_1 = require("./optiondefault");
 let value = "Ayn Uddin started doing TypeScript and Playwright on live coding session";
 console.log(value);
 // Number types in TypeScript
@@ -96,3 +99,20 @@ console.log(obj1);
 // Destructing this 
 let [usrname, age, isLoggedin] = obj1;
 console.log(age);
+enumFile_1.EnumClass.run();
+enumFile_1.EnumClass.checkPaymentStatus();
+const status = "success"; // can able to again
+//const status1:Status = "cancelled"; // not able to assign because not add in type
+console.log(status);
+const emp = {
+    id: 101,
+    name: "Ayn",
+    //email:"ayn@gmail.com"
+};
+console.log(emp);
+// optional and default paramter 
+optiondefault_1.OPTDEF.gretting("Ayn"); // here optional or default not make so data pass
+optiondefault_1.OPTDEF.grettingOpt(); // now i make it optional same function without param also fine
+optiondefault_1.OPTDEF.grettingOpt("Salim");
+optiondefault_1.OPTDEF.greetingDefault(); // with default
+optiondefault_1.OPTDEF.greetingDefault("Uddin"); // with val
