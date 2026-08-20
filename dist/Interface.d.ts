@@ -1,7 +1,6 @@
 interface User {
     id: number;
     name: string;
-    email?: string;
 }
 declare let user: User;
 declare let user2: User;
